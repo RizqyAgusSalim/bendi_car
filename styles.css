@@ -1,0 +1,54 @@
+/* Warna tema */
+:root {
+    --primary-color: #0072ff;
+    --secondary-color: #00c6ff;
+    --danger-color: #ff4757;
+    --success-color: #2ed573;
+    --warning-color: #ffa502;
+    --text-color: #2f3640;
+    --bg-color: #f5f6fa;
+    --sidebar-bg: #2f3640;
+    --sidebar-text: #dcdde1;
+}
+
+/* Animasi dan Transisi */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 1001;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+.bg-img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.6);
+    position: absolute;
+}
